@@ -23,11 +23,11 @@ services:
         networks:
             - condominio_backend
         depends_on:
-            - mysql
-            - redis
-            - meilisearch
-            - mailpit
-            - selenium
+            - <php_skeleton>_mysql
+            - <php_skeleton>_redis
+            - <php_skeleton>_meilisearch
+            - <php_skeleton>_mailpit
+            - <php_skeleton>_selenium
 
     <php_skeleton>_mysql:        
         image: 'mysql:latest'
@@ -59,7 +59,7 @@ services:
             retries: 3
             timeout: 5s
 
-    redis:
+    <php_skeleton>_redis:
         image: 'redis:alpine'
         container_name: <php_skeleton>_redis
         ports:
@@ -76,7 +76,7 @@ services:
             retries: 3
             timeout: 5s
 
-    meilisearch:
+    <php_skeleton>_meilisearch:
         image: 'getmeili/meilisearch:latest'
         container_name: <php_skeleton>_emilisearch
         ports:
@@ -95,7 +95,7 @@ services:
             retries: 3
             timeout: 5s
 
-    mailpit:
+    <php_skeleton>_mailpit:
         image: 'axllent/mailpit:latest'
         container_name: <php_skeleton>_mailpit
         ports:
@@ -104,7 +104,7 @@ services:
         networks:
             - condominio_backend
 
-    selenium:
+    <php_skeleton>_selenium:
         image: selenium/standalone-chrome
         container_name: <php_skeleton>_selenium
         extra_hosts:
