@@ -19,16 +19,18 @@ git clone https://github.com/e2ateam/php_skeleton
 
 **Passo 4:** Create .env file from .env.example
 
-**Passo 5:** Run vendor/bin/sail up -d or if you have composer installed, run composer docker-up
+**Passo 5:** Run vendor/bin/sail up -d --build
 
-**Passo 6:** Generate application key
+**Passo 6:** Run vendor/bin/sail up -d or if you have composer installed, run composer docker-up
+
+**Passo 7:** Generate application key
 
 ```console
 php artisan key:generate
 ```
 
-**Passo 7:** Rebuild the git repository
+**Passo 8:** Rebuild the git repository
 
-**Passo 8:** Add vendor folder in .gitignore file
+**Passo 9:** Add vendor folder in .gitignore file
 
-**Passo 9:** Rewrite the readme.md file
+**Passo 10:** Rewrite the readme.md file

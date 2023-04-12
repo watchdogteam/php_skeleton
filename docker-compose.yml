@@ -23,11 +23,11 @@ services:
         networks:
             - condominio_backend
         depends_on:
-            - mysql
-            - redis
-            - meilisearch
-            - mailpit
-            - selenium
+            - <php_skeleton>_mysql
+            - <php_skeleton>_redis
+            - <php_skeleton>_meilisearch
+            - <php_skeleton>_mailpit
+            - <php_skeleton>_selenium
 
     <php_skeleton>_mysql:        
         image: 'mysql:latest'
