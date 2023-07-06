@@ -23,14 +23,24 @@ git clone https://github.com/e2ateam/php_skeleton
 
 **Passo 6:** Run vendor/bin/sail up -d or if you have composer installed, run composer docker-up
 
-**Passo 7:** Generate application key
+**Passo 7:** Delete vendor folder
+
+**Passo 8:** Run composer install
+
+**Passo 9:** Generate application key
 
 ```console
 php artisan key:generate
 ```
 
-**Passo 8:** Rebuild the git repository
+**Passo 10:** Generate laravel passport keys
 
-**Passo 9:** Add vendor folder in .gitignore file
+```console
+php artisan passport:keys
+```
 
-**Passo 10:** Rewrite the readme.md file
+**Passo 11:** Rebuild the git repository
+
+**Passo 12:** Add vendor folder in .gitignore file
+
+**Passo 13:** Rewrite the readme.md file
